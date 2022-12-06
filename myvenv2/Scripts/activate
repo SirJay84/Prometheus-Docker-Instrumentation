@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\user\Desktop\projects\courses\Udemy\prometheus\docker_instrumentation\myvenv2"
+VIRTUAL_ENV="C:\Users\user\Documents\SirJayProjects\Prometheus-Docker-Instrumentation\myvenv2"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

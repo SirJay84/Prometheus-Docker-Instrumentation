@@ -1,13 +1,15 @@
-# This is docker file for Custom prometheus Docker Application Instrumentation 
+FROM tiangolo/uwsgi-nginx-flask:python3.9
 
-FROM tiangolo/uwsgi-nginx-flask:python3.8
+COPY . /app
 
-RUN pip install prometheus_client 
+WORKDIR /app
 
-ENV LISTEN_PORT 5001
+RUN pip install --upgrade pip
+
+RUN pip install -r requirements.txt
 
 EXPOSE 5001
 
-COPY ./app /app 
+ENTRYPOINT [ "python" ]
 
-WORKDIR /app 
+CMD ["app/main.py"]
